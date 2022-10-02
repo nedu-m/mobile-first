@@ -28,16 +28,16 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
 
-section h2 {
-  font-size: 2.5rem;
-}
+  h2 {
+    font-size: 2.5rem;
+  }
 
-section ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* Header and Nav styles */
@@ -51,40 +51,42 @@ header {
   margin: 0 auto;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 
-nav li {
-  flex-basis: 48%;
-  margin-bottom: 0.5rem;
-}
+  li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+  }
 
-nav li:first-child {
-  flex-basis: 100%;
-  text-align: center;
-  overflow: hidden;
-}
+  li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
 
-nav a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: white;
-  display: block;
-  padding: 0.5rem;
-  background-color: var(--color4);
-  border-radius: 5px;
-  text-align: center;
-}
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--color4);
+    border-radius: 5px;
+    text-align: center;
+  }
 
-nav a:hover {
-  background-color: var(--color1);
-  color: var(--color5);
+  a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+  }
 }
 
 /* Hero styles */
@@ -114,16 +116,20 @@ elements stacked individually as blocks */
     display: flow-root;
     max-width: 900px;
   }
-  nav ul {
-    justify-content: center;
-    gap: 1.2em;
-  }
-  nav li {
-    flex-basis: auto;
-    margin-bottom: 0;
-  }
-  nav a {
-    color: var(--color1);
-    background-color: transparent;
+  nav {
+    ul {
+      justify-content: center;
+      gap: 1.2em;
+    }
+
+    li {
+      flex-basis: auto;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--color1);
+      background-color: transparent;
+    }
   }
 }
