@@ -1,0 +1,129 @@
+:root {
+  --color1: #001219;
+  --color2: #e9d8a6;
+  --color3: #ca6702;
+  --color4: #9b2226;
+  --color5: #f3e9d2;
+}
+
+/* generic styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dbe5de;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header and Nav styles */
+.header {
+  background-color: var(--color2);
+}
+
+header {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+nav li {
+  flex-basis: 48%;
+  margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+  padding: 0.5rem;
+  background-color: var(--color4);
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--color1);
+  color: var(--color5);
+}
+
+/* Hero styles */
+#hero {
+  background-color: var(--color3);
+  text-align: center;
+  max-width: 100%;
+}
+
+/* turn on flexbox here - prior to this,
+elements stacked individually as blocks */
+@media (min-width: 800px) {
+  section ul,
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  /*
+  flex basis means how much space each item takes up.
+  flex basis is set to 49% to allow for 2 columns/
+  */
+  section li {
+    flex-basis: 49.5%;
+  }
+  .missiontext {
+    display: flow-root;
+    max-width: 900px;
+  }
+  nav ul {
+    justify-content: center;
+    gap: 1.2em;
+  }
+  nav li {
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
+  nav a {
+    color: var(--color1);
+    background-color: transparent;
+  }
+}
